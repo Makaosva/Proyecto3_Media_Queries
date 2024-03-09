@@ -1,0 +1,26 @@
+body{
+    display: grid;
+    grid-template-areas: 
+        "head"
+        "nav"
+        "main"
+        "foot";
+    min-height: 100vh;
+}
+
+header{
+    grid-area: head;
+    border: 1px solid black;
+}
+nav{
+    grid-area: area;
+    border: 1px solid blue;
+}
+main{
+    grid-area: main;
+    border: 1px solid red;
+}
+footer{
+    grid-area: foot;
+    border: 1px solid green;
+}
