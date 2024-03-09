@@ -20,8 +20,26 @@ aside {
   grid-area: nav;
   border: 1px solid blue;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
+  flex-direction: column;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+aside div.boxes {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
+  flex-direction: row;
+}
+aside div.box {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+aside p {
+  font-size: 30px;
+  padding-left: 10px;
 }
 main.products {
   grid-area: main;
@@ -98,20 +116,15 @@ button {
   background-color: rgb(201, 199, 199);
 }
 .filter div {
-  margin: 20px;
+  margin: 0 20px 20px 20px;
 }
 .filter p {
   padding: 10px;
+  font-size: 20px;
 }
 
 .filter select {
   min-width: 100%;
   padding: 10px;
   border-radius: 6px;
-}
-aside div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
 }
