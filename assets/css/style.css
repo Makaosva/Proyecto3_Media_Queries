@@ -89,11 +89,11 @@ button {
   border-bottom-right-radius: 5px;
 }
 
-.filtro {
+.filter {
   text-align: center;
   display: flex;
   flex-direction: column;
 }
-.filtro div {
-  margin-bottom: 30px;
+.filter div {
+  margin: 20px;
 }
