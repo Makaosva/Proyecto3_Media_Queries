@@ -19,6 +19,9 @@ header.filter {
 aside {
   grid-area: nav;
   border: 1px solid blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 main.products {
   grid-area: main;
@@ -88,12 +91,28 @@ button {
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
 }
-
 .filter {
   text-align: center;
   display: flex;
   flex-direction: column;
+  background-color: rgb(201, 199, 199);
 }
 .filter div {
   margin: 20px;
+}
+.filter p {
+  padding: 10px;
+}
+
+.filter select {
+  min-width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+aside div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
 }
