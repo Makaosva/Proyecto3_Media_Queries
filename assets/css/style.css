@@ -1,26 +1,65 @@
-body{
-    display: grid;
-    grid-template-areas: 
-        "head"
-        "nav"
-        "main"
-        "foot";
-    min-height: 100vh;
+* {
+  margin: 0;
+}
+body {
+  display: grid;
+  grid-template-areas:
+    "nav"
+    "head"
+    "main"
+    "foot";
+  min-height: 100vh;
+  grid-template-rows: 1fr 1fr 10fr 1fr;
 }
 
-header{
-    grid-area: head;
-    border: 1px solid black;
+header.filter {
+  grid-area: head;
+  border: 1px solid black;
 }
-nav{
-    grid-area: area;
-    border: 1px solid blue;
+aside {
+  grid-area: nav;
+  border: 1px solid blue;
 }
-main{
-    grid-area: main;
-    border: 1px solid red;
+main.products {
+  grid-area: main;
+  border: 1px solid red;
+  display: flex;
 }
-footer{
-    grid-area: foot;
-    border: 1px solid green;
+footer {
+  grid-area: foot;
+  border: 1px solid green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+footer i {
+  padding: 3px;
+}
+footer p {
+  margin: 0;
+  padding: 3px;
+}
+
+.card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin: 30px;
+  text-align: center;
+  height: 60%;
+  display: grid;
+  /*flex-direction: column;*/
+  grid-template-rows: 4fr 1fr;
+}
+.card-img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px 8px 0 0;
+}
+.card-content {
+  padding: 10px;
+}
+button {
+  padding: 10px;
+  border-radius: 8px;
 }
