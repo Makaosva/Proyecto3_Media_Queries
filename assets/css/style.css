@@ -8,7 +8,7 @@ body {
     "head"
     "main"
     "foot";
-  grid-template-rows: 70px 1fr 5fr 70px;
+  grid-template-rows: 70px 1fr 4fr 70px;
   min-height: 100vh;
 }
 
@@ -17,32 +17,36 @@ header.filter {
 }
 aside {
   grid-area: nav;
-  /*border: 1px solid blue;*/
-  display: flex;
-  justify-content: space-around;
-  flex-direction: column;
-  padding-left: 15px;
-  padding-right: 15px;
-  background-color: rgb(1, 99, 1);
-}
-aside div.boxes {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
   color: white;
+  background-color: rgb(1, 99, 1);
 }
-aside div.box {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-wrap: wrap;
-  flex-direction: row;
+aside i {
+  margin-left: 20px;
+}
+aside a {
+  display: none;
 }
 aside p {
-  font-size: 24px;
+  font-size: 18px;
   padding-left: 10px;
 }
+aside div {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+}
+aside i.sandwich {
+  margin-right: 10px;
+}
+
+aside i.car {
+  margin-top: 10px;
+}
+
 main {
   grid-area: main;
   display: flex;
@@ -155,14 +159,21 @@ button {
       "nav nav"
       "head main"
       "foot foot";
-    grid-template-rows: 60px auto 60px;
+    grid-template-rows: 60px auto 65px;
   }
-  .boxes > i {
+  aside .sandwich {
     display: none;
   }
 
-  .lista {
+  aside > a {
     display: flex;
+    justify-items: flex-end;
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+  }
+  aside a:hover {
+    color: yellow;
   }
   .atributos {
     padding: 10px;
@@ -174,14 +185,13 @@ button {
     padding: 0;
   }
   .card {
-    margin-top: 10px;
-    margin-left: 20px;
+    margin: 10px 0 10px 10px;
   }
   .cardT {
     border: 1px solid #ccc;
     border-radius: 8px;
     display: grid;
-    margin: 30px;
+    margin: 10px 10px 10px 0;
   }
   .cardPC {
     display: none;
@@ -195,19 +205,28 @@ button {
       "nav main"
       "foot main";
     grid-template-rows: 100px auto 100px;
-    grid-template-columns: 160px auto;
+    grid-template-columns: 170px auto;
   }
-  aside div.boxes {
-    /*justify-content: flex-start;*/
-    flex-direction: column;
-  }
-  .boxes > i {
+  aside .sandwich {
     display: none;
   }
-
-  .lista {
+  aside {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    
   }
+
+  aside a {
+    display:inline;
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+  }
+  aside a:hover {
+    color: yellow;
+  }
+
   .atributos {
     padding: 10px;
   }
